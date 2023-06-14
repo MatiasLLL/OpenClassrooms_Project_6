@@ -17,6 +17,7 @@ const LogoKasa = styled.img`
 const StyledLink = styled(Link)`
     text-decoration: none;
     font-size: 22px;
+    row-gap: 40px;
 `
 
 function Header() {
@@ -25,17 +26,9 @@ function Header() {
             <Link to="/">
                 <LogoKasa src={Logo} />
             </Link>
-            <nav
-                style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    width: 240,
-                    listStyleType: 'none',
-                    color: '#FF6060',
-                }}
-            >
+            <nav>
                 <StyledLink to="/">Accueil</StyledLink>
-                <StyledLink to="/survey"> À Propos</StyledLink>
+                <StyledLink to="/apropos"> À Propos</StyledLink>
             </nav>
         </HeaderWrapper>
     )
