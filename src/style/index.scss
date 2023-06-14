@@ -1,0 +1,10 @@
+body {
+    margin: 0
+}
+
+$textColor: #ff6060;
+
+h1, a, p {
+    color: $textColor;
+    font-weight: 500
+}
