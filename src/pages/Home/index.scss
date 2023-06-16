@@ -1,0 +1,21 @@
+.sectionHome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bannerTxt {
+    color: #fff;
+    font-size: 48px;
+}
+
+.gallery {
+	width: 95%;
+	background-color: #f6f6f6;
+	height: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+	margin-top: 1.4em;
+}

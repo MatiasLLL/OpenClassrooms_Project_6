@@ -1,36 +1,22 @@
 import { Link } from 'react-router-dom'
 import Logo from '../../assets/logo.svg'
-import styled from 'styled-components'
-
-const HeaderWrapper = styled.header`
-    height: 150px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 100px 0 100px;
-`
-
-const LogoKasa = styled.img`
-    height: 68px;
-`
-
-const StyledLink = styled(Link)`
-    text-decoration: none;
-    font-size: 22px;
-    row-gap: 40px;
-`
+import './index.scss'
 
 function Header() {
     return (
-        <HeaderWrapper>
-            <Link to="/">
-                <LogoKasa src={Logo} />
+        <header>
+            <Link className={'logoKasaHeader'} to="/">
+                <img src={Logo} alt={'Logo Kasa'} />
             </Link>
             <nav>
-                <StyledLink to="/">Accueil</StyledLink>
-                <StyledLink to="/apropos"> À Propos</StyledLink>
+                <Link className={'linkNav'} to="/">
+                    Accueil
+                </Link>
+                <Link className={'linkNav'} to="/apropos">
+                    À Propos
+                </Link>
             </nav>
-        </HeaderWrapper>
+        </header>
     )
 }
 
