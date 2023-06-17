@@ -1,11 +1,22 @@
 import { useState } from 'react'
+import './index.scss'
+import Arrow from '../../assets/arrow-dropdown.svg'
 
 function DropDown({ title, content }) {
     const [isOpen, setIsOpen] = useState(false)
+
+    let toggleClassCheck = isOpen ? ' click' : ''
     return (
-        <div>
-            <span onClick={() => setIsOpen(!isOpen)}>{title}</span>
-            {isOpen ? <p>{content}</p> : null}
+        <div className={'dropDown'}>
+            <div className={'dropDownTitle'} onClick={() => setIsOpen(!isOpen)}>
+                <span>{title}</span>
+                <img
+                    className={`dropDownArrow${toggleClassCheck}`}
+                    src={Arrow}
+                    alt="Arrow Dropdown"
+                />
+            </div>
+            {isOpen ? <p className={'dropDownContent'}>{content}</p> : null}
         </div>
     )
 }

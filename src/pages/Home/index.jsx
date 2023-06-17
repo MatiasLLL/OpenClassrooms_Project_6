@@ -8,7 +8,7 @@ import { useFetch } from '../../hooks'
 function Home() {
     return (
         <main>
-            <section className={'sectionHome'}>
+            <section className={'sectionBanner'}>
                 <picture className={'banner'}>
                     <img
                         className={'bannerImg'}
