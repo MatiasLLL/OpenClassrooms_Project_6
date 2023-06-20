@@ -1,14 +1,13 @@
 import PropTypes from 'prop-types'
-import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './index.scss'
 
-function Card({ cover, title }) {
-    const [isClicked, setIsClicked] = useState(false)
+function Card({ cover, title, id }) {
     return (
-        <div className={'card'} onClick={() => setIsClicked(!isClicked)}>
+        <Link className={'card'} to={`/fichelogement/${id}`}>
             <img className={'cardImg'} src={cover} alt={title} />
             <p className={'cardTitle'}>{title}</p>
-        </div>
+        </Link>
     )
 }
 

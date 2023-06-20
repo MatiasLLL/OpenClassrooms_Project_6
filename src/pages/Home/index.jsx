@@ -3,9 +3,12 @@ import './index.scss'
 import HomeImg from '../../assets/home-banner-desktop.jpg'
 import Card from '../../components/CardGallery'
 import { useFetch } from '../../hooks'
-// import Logement from '../../datas/logements.json'
 
 function Home() {
+    const { data, error } = useFetch('/logements.json')
+    if (error) {
+        return <span>Il y a un problème</span>
+    }
     return (
         <main>
             <section className={'sectionBanner'}>
@@ -22,32 +25,16 @@ function Home() {
                     </div>
                 </picture>
             </section>
-            <GalleryLogement />
-        </main>
-    )
-}
-
-function GalleryLogement() {
-    const url = '../../datas/logements.json'
-    const { data, error } = useFetch(url)
-    const logementList = data?.logementList
-
-    if (error) {
-        return <span>Il y a un problème</span>
-    }
-
-    return (
-        <section className={'gallery'}>
-            <div>
-                {logementList?.map((logement, index) => (
+            <section className={'gallery'}>
+                {data?.map((logement, index) => (
                     <Card
                         key={`${logement.id}-${index}`}
                         title={logement.title}
                         cover={logement.cover}
                     />
                 ))}
-            </div>
-        </section>
+            </section>
+        </main>
     )
 }
 
