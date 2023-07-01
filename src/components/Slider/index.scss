@@ -1,0 +1,14 @@
+.sliderContainer {
+    border-radius: 25px;
+}
+
+.sliderImg {
+    // display: none;
+    width: 100%;
+    height: 415px;
+    border-radius: 25px;
+}
+
+.sliderImg.active {
+    display: block;
+}

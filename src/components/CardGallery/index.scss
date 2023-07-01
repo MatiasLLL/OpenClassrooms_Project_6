@@ -11,36 +11,33 @@
     border-radius: 25px;
     justify-content: center;
     align-items: center;
+
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 1/1;
+        border-radius: 10px;
+        min-height: 340px;
+
+        .cardImg {
+            width: 92%;
+            aspect-ratio: 1/1;
+            border-radius: 10px;
+        }
+
+        .cardTitle {
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            left: 2em;
+            bottom: 2em;
+            color: #fff;
+            font-size: 18px;
+            max-width: 85%;
+        }
+    }
 }
 
-.card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    aspect-ratio: 1/1;
-    border-radius: 10px;
-    min-height: 340px;
-}
-
-.cardImg {
-    width: 92%;
-    aspect-ratio: 1/1;
-    border-radius: 10px;
-}
-
-.cardTitle {
-    position: absolute;
-    padding: 0;
-    margin: 0;
-    left: 2em;
-    bottom: 2em;
-    color: #fff;
-    font-size: 18px;
-    max-width: 85%;
-}
-
-// *, ::before, ::after {
-//     box-sizing: border-box;
-//   }

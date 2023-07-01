@@ -26,9 +26,10 @@ function Home() {
                 </picture>
             </section>
             <section className={'gallery'}>
-                {data?.map((logement, index) => (
+                {data?.map((logement) => (
                     <Card
-                        key={`${logement.id}-${index}`}
+                        id={logement.id}
+                        key={logement.id}
                         title={logement.title}
                         cover={logement.cover}
                     />

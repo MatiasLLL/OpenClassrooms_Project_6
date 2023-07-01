@@ -15,14 +15,22 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/APropos" element={<APropos />} />
-                <Route
-                    path="/FicheLogement:logementNumber"
-                    element={<FicheLogement />}
-                />
+                <Route path="/apropos" element={<APropos />} />
+                <Route path="/fichelogement/:id" element={<FicheLogement />} />
                 <Route path="*" element={<Error />} />
             </Routes>
             <Footer />
         </Router>
     </React.StrictMode>
 )
+
+// useRouteError
+
+// errorElement={<ErrorBoundary />}
+
+// function ErrorBoundary() {
+//     let error = useRouteError()
+//     console.error(error)
+//     // Uncaught ReferenceError: path is not defined
+//     return <div>Il semblerait que la page que vous cherchez n’existe pas</div>
+// }

@@ -2,10 +2,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .bannerTxt {
+        color: #fff;
+        font-size: 48px;
+    }
 }
 
-.bannerTxt {
-    color: #fff;
-    font-size: 48px;
-}
+
 

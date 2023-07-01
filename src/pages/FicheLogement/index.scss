@@ -1,0 +1,93 @@
+.sectionLogement {
+    margin: 1.5% 5%;
+    min-height: 600px;
+
+    .asideLogement {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .contentLogement {
+            display: flex;
+            flex-direction: column;
+            // width: 65%;
+
+            .titleLogement {
+                font-size: 2em;
+                padding: 0.65em 0 0.4em 0;
+                margin: 0;
+            }
+
+            .locationLogement {
+                margin: 0;
+            }
+
+            .tagListLogement {
+                display: flex;
+                column-gap: 13px;
+                padding: 0;
+                margin: 0;
+
+                .tagLogement {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+                    background-color: #ff6060;
+                    font-size: 0.85em;
+                    border-radius: 10px;
+                    margin: 25px 0;
+                    min-width: 12em;
+                    min-height: 2em;
+                }
+            }
+        }
+
+        .hostLogement {
+            display: flex;
+            flex-direction: column;
+            padding-top: 25px;
+
+            .infoHost {
+                display: flex;
+                flex-direction: row;
+
+                .nameHost {
+                    display: flex;
+                    margin: 0 0.75em 0 0;
+                    max-width: 80px;
+                    align-items: center;
+                    text-align: right;
+                    line-height: 25px;
+                }
+
+                img {
+                    border-radius: 100%;
+                    height: 64px;
+                    width: 64px;
+                }
+            }
+        }
+    }
+
+    .dropdownLogement {
+        display: flex;
+        justify-content: space-between;
+        min-width: 100%;
+        margin-bottom:60px !important;
+
+        .dropDown {
+            width: 46%;
+        }
+
+        .listEquipements {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .dropDownContent {
+            padding: 4.5% 0 4.5% 4%;
+        }
+    }
+}

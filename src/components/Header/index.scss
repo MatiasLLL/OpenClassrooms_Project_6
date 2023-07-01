@@ -4,24 +4,30 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 5%;
+
+    .logoKasaHeader {
+        height: 68px;
+    }
+
+    nav {
+        display: inline-flex;
+        justify-content: space-between;
+        list-style-type: none;
+        width: 250px;
+
+        .linkNav {
+            text-decoration: none;
+            font-size: 22px;
+        }
+
+        .linkNav:hover {
+            text-decoration-line: underline;
+        }
+        
+        .linkNav.active {
+            text-decoration-line: underline;
+        }
+
+    }
 }
 
-.logoKasaHeader {
-    height: 68px;
-}
-
-nav {
-    display: inline-flex;
-    justify-content: space-between;
-    list-style-type: none;
-    width: 250px;
-}
-
-.linkNav {
-    text-decoration: none;
-    font-size: 22px;
-}
-
-.linkNav:hover {
-    text-decoration-line: underline;
-}

@@ -5,16 +5,17 @@ footer {
     align-items: center;
     height: 209px;
     background-color: #000000;
+
+    .logoKasaFooter {
+        max-height: 40px;
+        padding-top: 4rem;
+        box-sizing: content-box;
+    }
+    
+    .footerText {
+        color: #ffffff;
+        font-size: 24px;
+        padding-top: 1rem;
+    }
 }
 
-.logoKasaFooter {
-    max-height: 40px;
-    padding-top: 4rem;
-    box-sizing: content-box;
-}
-
-.footerText {
-    color: #ffffff;
-    font-size: 24px;
-    padding-top: 1rem;
-}

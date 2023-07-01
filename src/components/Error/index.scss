@@ -3,21 +3,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
 
-.errorImg {
-    max-height: 263px;
-    margin: 7%;
-}
-
-.errorSubtitle {
-    text-decoration: none;
-    font-size: 36px;
-    margin: 4%;
-}
+    .errorImg {
+        max-height: 263px;
+        margin: 7%;
+    }
     
-.errorHomeLink {
-    text-decoration: none;
-    font-size: 18px;
-    margin: 7%;
+    .errorSubtitle {
+        text-decoration: none;
+        font-size: 36px;
+        margin: 4%;
+    }
+        
+    .errorHomeLink {
+        text-decoration: none;
+        font-size: 18px;
+        margin: 7%;
+    }
+    
 }
+
