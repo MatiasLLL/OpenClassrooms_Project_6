@@ -1,3 +1,7 @@
+.loadingLogement {
+    height: 690px;
+}
+
 .sectionLogement {
     margin: 1.5% 5%;
     min-height: 600px;
@@ -54,7 +58,7 @@
 
                 .nameHost {
                     display: flex;
-                    margin: 0 0.75em 0 0;
+                    margin: 0 0.75em 0 1.25em;
                     max-width: 80px;
                     align-items: center;
                     text-align: right;
@@ -66,6 +70,16 @@
                     height: 64px;
                     width: 64px;
                 }
+            }
+
+            .rating {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 20px;
+            
+                // .ratingStar {
+                //     color: #ff6060;
+                // }
             }
         }
     }
