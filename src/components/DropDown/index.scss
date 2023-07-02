@@ -1,18 +1,15 @@
 .dropDown.close {
-    border-radius: 10px 10px 5px 5px;
-    background-color: #F7F7F7;
-    width: 80%;
     height: 52px;
 }
 
-.dropDown.click {
-    border-radius: 10px 10px 5px 5px;
-    background-color: #F7F7F7;
-    width: 80%;
+.dropDown.open {
     height: 50%;
 }
 
 .dropDown {
+    border-radius: 10px 10px 5px 5px;
+    background-color: #F7F7F7;
+    width: 80%;
 
     .dropDownTitle {
         font-weight: 500;
@@ -36,7 +33,7 @@
             transition: transform 150ms;
         }
         
-        .dropDownArrow.click {
+        .dropDownArrow.open {
             transform: rotate(-180deg);
             transition: transform 150ms;
         }

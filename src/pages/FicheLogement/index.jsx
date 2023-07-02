@@ -1,10 +1,10 @@
-import { useParams, useNavigate } from "react-router-dom"
-import { useState, useEffect } from "react"
+import { useParams, useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 // import { useFetch } from '../../hooks'
-import DropDown from "../../components/DropDown"
-import Slider from "../../components/Slider"
-import Rating from "../../components/Rating"
-import "./index.scss"
+import DropDown from '../../components/DropDown'
+import Slider from '../../components/Slider'
+import Rating from '../../components/Rating'
+import './index.scss'
 
 function FicheLogement() {
     // const { data, error } = useFetch('/logements.json')
@@ -14,7 +14,7 @@ function FicheLogement() {
     const navigate = useNavigate()
     useEffect(() => {
         setLoading(true)
-        fetch("/logements.json").then((response) =>
+        fetch('/logements.json').then((response) =>
             response
                 .json()
                 .then((result) => {
@@ -30,36 +30,36 @@ function FicheLogement() {
     }, [params])
     if (loading) {
         return (
-            <div className={"loadingLogement"}>
+            <div className={'loadingLogement'}>
                 <p>Chargement du logement</p>
             </div>
         )
     }
     if (currentLocation === undefined) {
-        return navigate("/error404")
+        return navigate('/error404')
     }
     return (
-        <main className={"sectionLogement"}>
+        <main className={'sectionLogement'}>
             <Slider
                 key={currentLocation.id}
                 title={currentLocation.title}
                 pictures={currentLocation.pictures}
             />
-            <aside className={"asideLogement"}>
-                <div className={"contentLogement"}>
-                    <h1 className={"titleLogement"}>{currentLocation.title}</h1>
-                    <p className={"locationLogement"}>
+            <aside className={'asideLogement'}>
+                <div className={'contentLogement'}>
+                    <h1 className={'titleLogement'}>{currentLocation.title}</h1>
+                    <p className={'locationLogement'}>
                         {currentLocation.location}
                     </p>
-                    <ul className={"tagListLogement"}>
+                    <ul className={'tagListLogement'}>
                         {currentLocation.tags?.map((tag) => (
-                            <li className={"tagLogement"}>{tag}</li>
+                            <li className={'tagLogement'}>{tag}</li>
                         ))}
                     </ul>
                 </div>
-                <div className={"hostLogement"}>
-                    <div className={"infoHost"}>
-                        <p className={"nameHost"}>
+                <div className={'hostLogement'}>
+                    <div className={'infoHost'}>
+                        <p className={'nameHost'}>
                             {currentLocation.host.name}
                         </p>
                         <img
@@ -70,17 +70,17 @@ function FicheLogement() {
                     <Rating ratingLocation={currentLocation.rating} />
                 </div>
             </aside>
-            <div className={"dropdownLogement"}>
+            <div className={'dropdownLogement'}>
                 <DropDown
-                    title={"Description"}
+                    title={'Description'}
                     content={currentLocation.description}
                 />
                 <DropDown
-                    title={"Équipements"}
+                    title={'Équipements'}
                     content={
-                        <ul className={"listEquipements"}>
+                        <ul className={'listEquipements'}>
                             {currentLocation.equipments?.map((equipement) => (
-                                <li className={"equipementLogement"}>
+                                <li className={'equipementLogement'}>
                                     {equipement}
                                 </li>
                             ))}
@@ -96,63 +96,6 @@ export default FicheLogement
 
 // (result) => {
 //     result.forEach
-
-// const ratingLocation = currentLocation.rating
-//     if (ratingLocation === '1') {
-//         render(
-//             <div className={'rating'}>
-//                 <img src={RedStar} alt="etoile notation" />
-//                 <img src={Star} alt="etoile notation" />
-//                 <img src={Star} alt="etoile notation" />
-//                 <img src={Star} alt="etoile notation" />
-//                 <img src={Star} alt="etoile notation" />
-//             </div>
-//         )
-//     }
-//     if (ratingLocation === '2') {
-//         render(
-//             <div className={'rating'}>
-//                 <img src={RedStar} alt="etoile notation" />
-//                 <img src={RedStar} alt="etoile notation" />
-//                 <img src={Star} alt="etoile notation" />
-//                 <img src={Star} alt="etoile notation" />
-//                 <img src={Star} alt="etoile notation" />
-//             </div>
-//         )
-//     }
-//     if (ratingLocation === '3') {
-//         render(
-//             <div className={'rating'}>
-//                 <img src={RedStar} alt="etoile notation" />
-//                 <img src={RedStar} alt="etoile notation" />
-//                 <img src={RedStar} alt="etoile notation" />
-//                 <img src={Star} alt="etoile notation" />
-//                 <img src={Star} alt="etoile notation" />
-//             </div>
-//         )
-//     }
-//     if (ratingLocation === '4') {
-//         render(
-//             <div className={'rating'}>
-//                 <img src={RedStar} alt="etoile notation" />
-//                 <img src={RedStar} alt="etoile notation" />
-//                 <img src={RedStar} alt="etoile notation" />
-//                 <img src={RedStar} alt="etoile notation" />
-//                 <img src={Star} alt="etoile notation" />
-//             </div>
-//         )
-//     }
-//     if (ratingLocation === '5') {
-//         render(
-//             <div className={'rating'}>
-//                 <img src={RedStar} alt="etoile notation" />
-//                 <img src={RedStar} alt="etoile notation" />
-//                 <img src={RedStar} alt="etoile notation" />
-//                 <img src={RedStar} alt="etoile notation" />
-//                 <img src={RedStar} alt="etoile notation" />
-//             </div>
-//         )
-//     }
 
 // useEffect(() => {
 //     fetch("/logements.json").then((response) =>
@@ -195,46 +138,3 @@ export default FicheLogement
 //         }
 //         // return [currentLocation]
 //     }
-
-// <main className={'sectionLogement'}>
-//             {location?.map(() => (
-//                 <Slider
-//                     id={currentLocation.id}
-//                     key={currentLocation.id}
-//                     title={currentLocation.title}
-//                     pictures={currentLocation.pictures}
-//                 />
-//             ))}
-//         </main>
-
-// <main>
-//            {data?.map((logement, index) => (
-//                <div
-//                    key={`${logement.id}-${index}`}
-//                   title={logement.title}
-//                   cover={logement.cover}
-//               ></div>
-//            ))}
-//        </main>
-
-// <Caroussel />
-//             <aside>
-//                 <div>
-//                     <h1>{title}</h1>
-//                     <p>{location}</p>
-//                     <div>
-//                         <p>{tags}</p>
-//                     </div>
-//                 </div>
-//                 <div>
-//                     <div>
-//                         <p>{name}</p>
-//                         <img src={picture} alt="Propiétaire" />
-//                     </div>
-//                     <Ratings />
-//                 </div>
-//                 <div>
-//                     <DropDown title="Description" content="element"></DropDown>
-//                     <DropDown title="Équipements" content="element"></DropDown>
-//                 </div>
-//             </aside>

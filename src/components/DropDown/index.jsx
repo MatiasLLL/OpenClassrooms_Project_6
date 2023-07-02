@@ -4,7 +4,7 @@ import Arrow from '../../assets/arrow-dropdown.svg'
 
 function DropDown({ title, content }) {
     const [isOpen, setIsOpen] = useState(false)
-    let toggleClassCheck = isOpen ? ' click' : ' close'
+    let toggleClassCheck = isOpen ? ' open' : ' close'
 
     return (
         <div className={`dropDown${toggleClassCheck}`}>
