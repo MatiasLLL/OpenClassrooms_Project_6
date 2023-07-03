@@ -29,5 +29,23 @@ header {
         }
 
     }
+
+    @media (width <= 600px) {
+
+        height: 105px;
+        padding: 0 4%;
+
+        .logoKasaHeader {
+            max-height: 48px;
+        }
+
+        nav {
+            width: 46%;
+    
+            .linkNav {
+                font-size: 1em;
+            }
+        }
+    }
 }
 

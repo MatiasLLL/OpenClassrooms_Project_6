@@ -9,7 +9,11 @@ function Header() {
                 className={({ isActive }) => (isActive ? 'linkNav' : 'linkNav')}
                 to="/"
             >
-                <img src={Logo} alt={'Logo Kasa'} />
+                <img
+                    className={'logoKasaHeader'}
+                    src={Logo}
+                    alt={'Logo Kasa'}
+                />
             </NavLink>
             <nav>
                 <NavLink

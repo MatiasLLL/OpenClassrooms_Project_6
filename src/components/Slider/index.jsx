@@ -14,8 +14,11 @@ function Slider({ title, pictures }) {
     }
     return (
         <div className={'sliderContainer'}>
+            <div>
+                <img className={'sliderImg'} src={pictures[0]} alt={title} />
+            </div>
+            {/* <span>{text}</span> */}
             {/* <button src={ArrowPrev} /> */}
-            <img className={'sliderImg'} src={pictures[0]} alt={title} />
             {/* <button src={ArrowNext} /> */}
         </div>
     )

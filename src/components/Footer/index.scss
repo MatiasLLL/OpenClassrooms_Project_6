@@ -17,5 +17,19 @@ footer {
         font-size: 24px;
         padding-top: 1rem;
     }
-}
 
+    @media (width <= 600px) {
+
+        .logoKasaFooter {
+            padding-top: 11%;
+        }
+    
+        .footerText {
+            font-size: 0.72em;
+            padding: 1.8% 0 0 1.8%;
+            line-height: 1.45em;
+            width: 10em;
+            margin: 0;
+        }
+    }
+}
