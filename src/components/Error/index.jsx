@@ -7,7 +7,7 @@ function Error() {
         <div className={'errorWrapper'}>
             <img className={'errorImg'} src={Error404} alt={'Erreur 404'} />
             <h1 className={'errorSubtitle'}>
-                Il semblerait que la page que vous cherchez n’existe pas
+                Oups! La page que vous demandez n'existe pas.
             </h1>
             <Link className={'errorHomeLink'} to="/">
                 Retourner sur la page d’accueil
