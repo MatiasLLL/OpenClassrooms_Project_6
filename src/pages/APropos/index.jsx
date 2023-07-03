@@ -6,14 +6,14 @@ import DropDown from '../../components/DropDown'
 function APropos() {
     return (
         <main>
-            <section className={'sectionBanner'}>
-                <picture className={'banner'}>
+            <section className={'sectionBanner apropos'}>
+                <picture className={'banner apropos'}>
                     <img
-                        className={'bannerImg'}
+                        className={'bannerImg apropos'}
                         src={AProposImg}
                         alt="Mountain landscape"
                     />
-                    <div className={'bannerShadow'}></div>
+                    <div className={'bannerShadow apropos'}></div>
                 </picture>
             </section>
             <section className={'sectionDropDown'}>

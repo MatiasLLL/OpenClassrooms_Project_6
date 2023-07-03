@@ -8,5 +8,23 @@
     .dropDown {
         margin-bottom: 3.3%;
     }
+
+    @media (width <= 600px) {
+
+        margin: 5.5% 0;
+
+        .dropDown {
+            margin-bottom: 5.5%;
+        }
+    
+    }
+
 }
 
+@media (width <= 600px) {
+
+    .banner.apropos, .bannerImg.apropos, .bannerShadow.apropos {
+        max-height: 223px;
+    }
+
+}

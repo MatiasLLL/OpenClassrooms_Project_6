@@ -25,6 +25,23 @@
         height: 223px;
         text-align: center;
     }
+
+    @media (width <= 600px) {
+
+        margin: 0;
+        width: 92%;
+        border-radius: 10px;
+
+        .bannerImg {
+            border-radius: 10px;
+        }
+
+        .bannerShadow {
+            border-radius: 10px;
+            width: 92%;
+            justify-content: flex-start;
+        }
+    }
 }
 
 
