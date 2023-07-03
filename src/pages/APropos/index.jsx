@@ -1,4 +1,3 @@
-// import '../../style/Banner.scss'
 import './index.scss'
 import AProposImg from '../../assets/apropos-banner-desktop.jpg'
 import DropDown from '../../components/DropDown'

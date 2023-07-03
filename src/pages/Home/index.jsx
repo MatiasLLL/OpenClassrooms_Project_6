@@ -11,7 +11,7 @@ function Home() {
     }
     return (
         <main>
-            <section className={'sectionBanner'}>
+            <section className={'sectionBanner home'}>
                 <picture className={'banner'}>
                     <img
                         className={'bannerImg'}
