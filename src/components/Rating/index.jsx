@@ -1,63 +1,17 @@
-import './index.scss'
 import Star from '../../assets/star-rating.svg'
 import RedStar from '../../assets/red-star-rating.svg'
+import './index.scss'
 
 function Rating({ ratingLocation }) {
-    if (ratingLocation === '1') {
-        return (
-            <div className={'rating'}>
-                <img src={RedStar} alt="etoile notation" />
-                <img src={Star} alt="etoile notation" />
-                <img src={Star} alt="etoile notation" />
-                <img src={Star} alt="etoile notation" />
-                <img src={Star} alt="etoile notation" />
-            </div>
-        )
+    const stars = []
+
+    for (let i = 0; i < ratingLocation; i++) {
+        stars.push(<img key={stars} src={RedStar} alt="etoile notation" />)
     }
-    if (ratingLocation === '2') {
-        return (
-            <div className={'rating'}>
-                <img src={RedStar} alt="etoile notation" />
-                <img src={RedStar} alt="etoile notation" />
-                <img src={Star} alt="etoile notation" />
-                <img src={Star} alt="etoile notation" />
-                <img src={Star} alt="etoile notation" />
-            </div>
-        )
+    for (let i = 0; i < 5 - ratingLocation; i++) {
+        stars.push(<img key={stars} src={Star} alt="etoile notation" />)
     }
-    if (ratingLocation === '3') {
-        return (
-            <div className={'rating'}>
-                <img src={RedStar} alt="etoile notation" />
-                <img src={RedStar} alt="etoile notation" />
-                <img src={RedStar} alt="etoile notation" />
-                <img src={Star} alt="etoile notation" />
-                <img src={Star} alt="etoile notation" />
-            </div>
-        )
-    }
-    if (ratingLocation === '4') {
-        return (
-            <div className={'rating'}>
-                <img src={RedStar} alt="etoile notation" />
-                <img src={RedStar} alt="etoile notation" />
-                <img src={RedStar} alt="etoile notation" />
-                <img src={RedStar} alt="etoile notation" />
-                <img src={Star} alt="etoile notation" />
-            </div>
-        )
-    }
-    if (ratingLocation === '5') {
-        return (
-            <div className={'rating'}>
-                <img src={RedStar} alt="etoile notation" />
-                <img src={RedStar} alt="etoile notation" />
-                <img src={RedStar} alt="etoile notation" />
-                <img src={RedStar} alt="etoile notation" />
-                <img src={RedStar} alt="etoile notation" />
-            </div>
-        )
-    }
+    return <div className={'rating'}>{stars}</div>
 }
 
 export default Rating

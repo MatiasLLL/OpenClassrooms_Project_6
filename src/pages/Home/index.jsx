@@ -1,8 +1,8 @@
+import { useFetch } from '../../hooks'
+import Card from '../../components/CardGallery'
+import HomeImg from '../../assets/home-banner-desktop.jpg'
 import '../../style/Banner.scss'
 import './index.scss'
-import HomeImg from '../../assets/home-banner-desktop.jpg'
-import Card from '../../components/CardGallery'
-import { useFetch } from '../../hooks'
 
 function Home() {
     const { data, error } = useFetch('/logements.json')

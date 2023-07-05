@@ -20,7 +20,6 @@
         align-items: center;
         aspect-ratio: 1/1;
         border-radius: 10px;
-        min-height: 340px;
 
         .cardImg {
             width: 92%;
@@ -32,12 +31,16 @@
             position: absolute;
             padding: 0;
             margin: 0;
-            left: 2em;
-            bottom: 2em;
+            left: 1.8em;
+            bottom: 1.8em;
             color: #fff;
-            font-size: 18px;
-            max-width: 85%;
+            font-size: 1.2em;
+            max-width: 80%;
         }
+    }
+
+    @media (width <= 1000px) {
+        grid-template-columns: 1fr 1fr;
     }
 
     @media (width <= 600px) {
@@ -54,7 +57,6 @@
             aspect-ratio: 335/248;
             border-radius: 10px;
             height: auto;
-            // max-height: 408px;
             min-height: 200px;
 
             .cardImg {
@@ -64,6 +66,7 @@
             .cardTitle {
                 font-size: 18px;
                 max-width: 70%;
+                left: 2.5em;
             }
         }
     }

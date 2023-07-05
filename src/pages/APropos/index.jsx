@@ -1,6 +1,6 @@
-import './index.scss'
-import AProposImg from '../../assets/apropos-banner-desktop.jpg'
 import DropDown from '../../components/DropDown'
+import AProposImg from '../../assets/apropos-banner-desktop.jpg'
+import './index.scss'
 
 function APropos() {
     return (

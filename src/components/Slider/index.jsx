@@ -1,10 +1,19 @@
 import PropTypes from 'prop-types'
-// import ArrowPrev from '../../assets/arrow-prev.svg'
-// import ArrowNext from '../../assets/arrow-next.svg'
-
+import { useState } from 'react'
+import ArrowPrev from '../../assets/arrow-prev.svg'
+import ArrowNext from '../../assets/arrow-next.svg'
 import './index.scss'
 
 function Slider({ title, pictures }) {
+    const [count, setCount] = useState(0)
+    const prevPic = () => {
+        setCount(count === 0 ? pictures.length - 1 : count - 1)
+    }
+    const nextPic = () => {
+        setCount(count === pictures.length - 1 ? 0 : count + 1)
+    }
+    const currentPic = [count + 1]
+
     if (pictures.length === 1) {
         return (
             <div className={'sliderContainer'}>
@@ -15,11 +24,27 @@ function Slider({ title, pictures }) {
     return (
         <div className={'sliderContainer'}>
             <div>
-                <img className={'sliderImg'} src={pictures[0]} alt={title} />
+                <img
+                    className={'sliderImg'}
+                    src={pictures[count]}
+                    alt={title}
+                />
             </div>
-            {/* <span>{text}</span> */}
-            {/* <button src={ArrowPrev} /> */}
-            {/* <button src={ArrowNext} /> */}
+            <img
+                className={'prevImg'}
+                src={ArrowPrev}
+                onClick={prevPic}
+                alt={'ArrowPrev'}
+            />
+            <img
+                className={'nextImg'}
+                src={ArrowNext}
+                onClick={nextPic}
+                alt={'ArrowNext'}
+            />
+            <span
+                className={'currentImg'}
+            >{`${currentPic}/${pictures.length}`}</span>
         </div>
     )
 }
@@ -30,7 +55,3 @@ Slider.propTypes = {
 }
 
 export default Slider
-
-// const order = index > activeIndex ?
-//       ORDER_NEXT :
-//       ORDER_PREV

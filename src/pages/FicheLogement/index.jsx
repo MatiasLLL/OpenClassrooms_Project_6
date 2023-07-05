@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import DropDown from '../../components/DropDown'
 import Slider from '../../components/Slider'
@@ -9,7 +9,6 @@ function FicheLogement() {
     const [currentLocation, setCurrentLocation] = useState()
     const [loading, setLoading] = useState(true)
     const params = useParams()
-    const navigate = useNavigate()
     useEffect(() => {
         setLoading(true)
         fetch('/logements.json').then((response) =>
@@ -34,12 +33,11 @@ function FicheLogement() {
         )
     }
     if (currentLocation === undefined) {
-        return navigate('/error404')
+        return <Navigate to="/error404" />
     }
     return (
         <main className={'sectionLogement'}>
             <Slider
-                // key={currentLocation.id}
                 title={currentLocation.title}
                 pictures={currentLocation.pictures}
             />
@@ -51,7 +49,9 @@ function FicheLogement() {
                     </p>
                     <ul className={'tagListLogement'}>
                         {currentLocation.tags?.map((tag) => (
-                            <li className={'tagLogement'}>{tag}</li>
+                            <li key={tag} className={'tagLogement'}>
+                                {tag}
+                            </li>
                         ))}
                     </ul>
                 </div>
@@ -78,7 +78,10 @@ function FicheLogement() {
                     content={
                         <ul className={'listEquipements'}>
                             {currentLocation.equipments?.map((equipement) => (
-                                <li className={'equipementLogement'}>
+                                <li
+                                    key={equipement}
+                                    className={'equipementLogement'}
+                                >
                                     {equipement}
                                 </li>
                             ))}

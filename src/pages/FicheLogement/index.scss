@@ -10,11 +10,11 @@
         display: flex;
         width: 100%;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         .contentLogement {
             display: flex;
             flex-direction: column;
-            // width: 65%;
 
             .titleLogement {
                 font-size: 2em;
@@ -28,9 +28,11 @@
 
             .tagListLogement {
                 display: flex;
+                flex-wrap: wrap;
                 column-gap: 13px;
                 padding: 0;
-                margin: 0;
+                margin: 25px 0;
+                row-gap: 0.8em;
 
                 .tagLogement {
                     display: inline-flex;
@@ -40,9 +42,19 @@
                     background-color: #ff6060;
                     font-size: 0.85em;
                     border-radius: 10px;
-                    margin: 25px 0;
+                    margin:0;
                     min-width: 12em;
                     min-height: 2em;
+                }
+
+                @media (width <= 600px) {
+
+                    margin-bottom: 17px;
+
+                    .tagLogement {
+                        font-size: 0.75em;
+                        min-width: 9.5em;
+                    }
                 }
             }
         }
@@ -63,6 +75,11 @@
                     align-items: center;
                     text-align: right;
                     line-height: 25px;
+
+                    @media (width <= 600px) {
+
+                        margin-left: 0;
+                    }
                 }
 
                 img {
@@ -76,19 +93,30 @@
                 display: flex;
                 justify-content: space-between;
                 padding-top: 20px;
-            
-                // .ratingStar {
-                //     color: #ff6060;
-                // }
+            }
+
+            @media (width <= 770px) {
+
+                flex-direction: row-reverse;
+                width: 100%;
+                justify-content: space-between;
+                padding: 0;
+                margin-bottom: 2%;
+
+                .nameHost {
+                    margin-left: 1em;
+                }
             }
         }
     }
 
     .dropdownLogement {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         min-width: 100%;
         margin-bottom:60px !important;
+        margin-top: 1%;
 
         .dropDown {
             width: 46%;
@@ -102,6 +130,16 @@
 
         .dropDownContent {
             padding: 4.5% 0 4.5% 4%;
+        }
+
+        @media (width <= 600px) {
+
+            margin: 2% 0 0 0 !important;
+
+            .dropDown {
+                width: 100%;
+                margin-bottom: 35px;
+            }
         }
     }
 }

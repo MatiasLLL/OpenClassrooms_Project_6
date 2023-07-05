@@ -9,7 +9,13 @@ function Error() {
             <h1 className={'errorSubtitle'}>
                 Oups! La page que vous demandez n'existe pas.
             </h1>
-            <Link className={'errorHomeLink'} to="/">
+            <Link
+                className={'errorHomeLink'}
+                to="/"
+                onClick={() => {
+                    window.scroll(0, 0)
+                }}
+            >
                 Retourner sur la page d’accueil
             </Link>
         </div>

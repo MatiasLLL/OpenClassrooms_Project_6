@@ -5,7 +5,13 @@ import './index.scss'
 function Footer() {
     return (
         <footer>
-            <Link to="/" className={'logoKasaFooter'}>
+            <Link
+                className={'logoKasaFooter'}
+                to="/"
+                onClick={() => {
+                    window.scroll(0, 0)
+                }}
+            >
                 <img src={LogoFooter} alt={'Logo Kasa'} />
             </Link>
             <p className={'footerText'}>© 2020 Kasa. All rights reserved</p>

@@ -2,4 +2,17 @@
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
+    margin-bottom: 15px;
+    object-fit: fill;
+
+    @media (width <= 770px) {
+        font-size: 1px;
+        height: 70%;
+        padding: 0;
+        column-gap: 6px;
+
+        img {
+            height: 87%;
+        }
+    }
 }
