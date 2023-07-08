@@ -7,6 +7,10 @@
 
     .dropDown {
         margin-bottom: 3.3%;
+
+        .dropDownContent {
+            padding: 3.3% 0 2% 2.5%;
+        }
     }
 
     @media (width <= 600px) {
@@ -15,6 +19,10 @@
 
         .dropDown {
             margin-bottom: 5.5%;
+
+            .dropDownContent {
+                padding: 5.3% 0 3% 3.5%;
+            }
         }
     }
 }

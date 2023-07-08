@@ -23,14 +23,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </Router>
     </React.StrictMode>
 )
-
-// useRouteError
-
-// errorElement={<ErrorBoundary />}
-
-// function ErrorBoundary() {
-//     let error = useRouteError()
-//     console.error(error)
-//     // Uncaught ReferenceError: path is not defined
-//     return <div>Il semblerait que la page que vous cherchez n’existe pas</div>
-// }

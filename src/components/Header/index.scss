@@ -18,6 +18,10 @@ header {
         .linkNav {
             text-decoration: none;
             font-size: 22px;
+            
+            @media (width <= 600px) {
+                text-transform: uppercase;
+              }
         }
 
         .linkNav:hover {
@@ -27,6 +31,8 @@ header {
         .linkNav.active {
             text-decoration-line: underline;
         }
+
+        
     }
 
     @media (width <= 600px) {

@@ -7,7 +7,7 @@ function DropDown({ title, content }) {
     let toggleClassCheck = isOpen ? ' open' : ' close'
 
     return (
-        <div className={`dropDown${toggleClassCheck}`}>
+        <div className={'dropDown'}>
             <div className={'dropDownTitle'} onClick={() => setIsOpen(!isOpen)}>
                 <span>{title}</span>
                 <img
@@ -16,7 +16,11 @@ function DropDown({ title, content }) {
                     alt="Arrow Dropdown"
                 />
             </div>
-            {isOpen ? <div className={'dropDownContent'}>{content}</div> : null}
+            {isOpen ? (
+                <div className={`dropDownContent${toggleClassCheck}`}>
+                    {content}
+                </div>
+            ) : null}
         </div>
     )
 }
