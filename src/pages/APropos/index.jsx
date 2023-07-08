@@ -1,20 +1,13 @@
+import Banner from '../../components/Banner'
 import DropDown from '../../components/DropDown'
 import AProposImg from '../../assets/apropos-banner-desktop.jpg'
 import './index.scss'
 
 function APropos() {
+    const BannerAPropos = AProposImg
     return (
-        <main>
-            <section className={'sectionBanner apropos'}>
-                <picture className={'banner apropos'}>
-                    <img
-                        className={'bannerImg apropos'}
-                        src={AProposImg}
-                        alt="Mountain landscape"
-                    />
-                    <div className={'bannerShadow apropos'}></div>
-                </picture>
-            </section>
+        <main className={'mainAPropos'}>
+            <Banner image={BannerAPropos} title="Mountain landscape" />
             <section className={'sectionDropDown'}>
                 <DropDown
                     title={'Fiabilité'}
